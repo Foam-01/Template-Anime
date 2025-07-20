@@ -48,3 +48,13 @@ src/
 Navigate between pages using the top navigation bar. The banner slider automatically changes every 5 seconds, or use the navigation arrows and indicators.
 
 Enjoy! 🎉
+
+<img width="1915" height="965" alt="image" src="https://github.com/user-attachments/assets/6a8c37b4-c0ea-4586-a2a9-7c359208d4b9" />
+<img width="1911" height="958" alt="image" src="https://github.com/user-attachments/assets/3be2585d-602b-4816-9607-43e96c8c64d2" />
+<img width="1911" height="965" alt="image" src="https://github.com/user-attachments/assets/d651f077-66c2-4f35-b298-9cd26162a840" />
+<img width="1913" height="949" alt="image" src="https://github.com/user-attachments/assets/3f1a77fe-3dc5-4dd9-b2e2-7665cb27de20" />
+<img width="1910" height="963" alt="image" src="https://github.com/user-attachments/assets/9c09b064-f2a0-48e4-9867-5729f144d2e1" />
+
+
+
+
