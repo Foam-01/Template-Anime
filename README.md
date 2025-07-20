@@ -33,6 +33,7 @@ A modern, cute, and responsive anime-themed UI template built with React and Tai
 
 ## 📁 Folder Structure
 
+```bash
 Template-Anime/
 ├── public/
 │ └── image/ # Anime posters, screenshots
@@ -44,7 +45,7 @@ Template-Anime/
 ├── postcss.config.js # PostCSS plugins
 ├── package.json # Dependencies and scripts
 └── README.md # You're reading it 😄
-
+```
 
 ## 🚀 Getting Started
 
