@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Fonts (แนะนำให้ Import ผ่าน Google Fonts ใน public/index.html หรือใช้ @import) */
+/* ตัวอย่างการ Import จาก Google Fonts ใน public/index.html:
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Impact&display=swap" rel="stylesheet">
+*/
+
+/* Custom Font Family (ถ้าคุณต้องการใช้ฟอนต์ที่ดาวน์โหลดมาเอง) */
+/*
+@font-face {
+    font-family: 'GachiakutaTitleFont';
+    src: url('/fonts/YourGachiakutaFont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+/* Neon & Glow Effects (ปรับเป็นโทนฟ้า-เขียว) */
+
+/* Nav Active Neon Glow (Blue/Teal tone) */
+.nav-active-neon-blue {
+  box-shadow:
+    0 0 10px rgba(0, 206, 209, 0.8), /* Dark Cyan/Turquoise glow */
+    0 0 20px rgba(0, 206, 209, 0.6),
+    0 0 30px rgba(0, 255, 255, 0.4); /* Cyan secondary glow */
+}
+
+/* Neon Drop Shadow for Titles (Original - very bright for main banners, now blue/teal) */
+.drop-shadow-neon {
+  text-shadow:
+    0 0 7px #fff,        /* Inner white glow */
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #00CED1,    /* Primary Dark Cyan neon */
+    0 0 82px #00CED1,
+    0 0 92px #00CED1,
+    0 0 102px #00FFFF,   /* Secondary Cyan neon */
+    0 0 151px #00FFFF;
+}
+
+/* *** NEW: No Text Shadow Class *** */
+.text-shadow-none {
+  text-shadow: none;
+}
+
+/* Text Shadow for Banners (subtle glow for descriptions) */
+.text-shadow-glow {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+/* Button Glow Effect (Blue/Teal tone) */
+.button-glow-blue {
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.7), /* Deep Sky Blue glow */
+              0 0 25px rgba(0, 191, 255, 0.5);
+}
+
+/* Slide Navigation Button (Arrows) */
+.slide-nav-button {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* Subtle white glow */
+    backdrop-filter: blur(8px); /* Ensure blur is applied */
+}
+.slide-nav-button:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Stronger glow on hover */
+}
+
+/* Slide Indicator Glow (Blue/Teal tone) */
+.indicator-glow-blue {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Subtle white glow */
+}
+.indicator-glow-blue.bg-teal-500 { /* For the active indicator */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8); /* Stronger cyan glow */
+}
+
+
+/* Background Pattern (subtle, anime-like) */
+/* This SVG creates a subtle star pattern. Adjust color (fill) and opacity as needed. */
+.background-pattern {
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="star" width="10" height="10" viewBox="0 0 10 10"><path fill="%23ffffff" d="M5 0 L6.18 3.82 L10 4.12 L7.07 6.18 L7.94 10 L5 7.64 L2.06 10 L2.93 6.18 L0 4.12 L3.82 3.82 Z" transform="scale(0.3) translate(3.5,3.5)" opacity="0.05" /></pattern></defs><rect width="100%" height="100%" fill="url(%23star)" /></svg>');
+  background-size: 100px 100px; /* Adjust size of the pattern if needed */
+  background-repeat: repeat;
+  background-attachment: fixed; /* Keep background fixed when scrolling */
+}
+
+/* Card Hover Animation Timing */
+.card-hover-animation {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* standard ease-in-out */
+}
+
+/* Keyframes for animations (ensure these are present in tailwind.config.js extend.keyframes as well) */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceHorizontal {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-5px); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.15; }
+}
+
+/* Animation utilities (ensure these are configured in tailwind.config.js extend.animation as well) */
+.animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
+.animate-fade-in-down { animation: fadeInDown 0.7s ease-out forwards; }
+.animate-fade-in-left { animation: fadeInLeft 0.7s ease-out forwards; }
+.animate-fade-in-right { animation: fadeInRight 0.7s ease-out forwards; }
+.animate-slide-in-up { animation: slideInUp 0.6s ease-out forwards; }
+.animate-bounce-horizontal { animation: bounceHorizontal 1.5s infinite alternate; }
+.animate-pulse-slow { animation: pulseSlow 6s infinite ease-in-out; }
+
+/* Delay utility classes */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
